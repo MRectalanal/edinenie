@@ -1,0 +1,22 @@
+{
+	"name": "edinenie",
+	"version": "0.0.0",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"cookie-parser": "^1.4.3",
+		"express": "^4.16.2",
+		"formidable": "^1.2.1",
+		"fs": "0.0.1-security",
+		"ftp": "^0.3.10",
+		"http": "0.0.0",
+		"https": "^1.0.0",
+		"socket.io": "^2.1.0",
+		"url": "^0.11.0"
+	},
+	"devDependencies": {
+		"nodemon": "^1.14.12"
+	}
+}

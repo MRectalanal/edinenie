@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>«Единение» - Благотворительный фонд</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='css/style.css'>
+	<script type="text/javascript" src="js/socket.io.js"></script>
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/logic.js"></script>
+	<script type="text/javascript" src="js/fill_index.js"></script>
+</head>
+<body>
+	<section class="first_sec">
+		<video id="first_backgr" autoplay muted loop>
+			<source src="videoback.mp4"></source>
+		</video>
+		<div id="first_white"></div>
+		<div class="logo" onclick="location.href='#donate';">
+			<div class="logo_img">
+				<img src="img/logo.png"/>
+			</div>
+			<div class="logo_text">
+				<div class="logo_text_main">
+					<span>Единение</span>
+				</div>
+				<div class="logo_text_sub">
+					<span>благотворительный фонд</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="text_sec second_sec">
+		<p class="content_header text_header">Наша деятельность:</p>
+		<p>содействие развитию проектов в сфере образования, науки, культуры и просвещения;</p>
+		<p>поддержка деятельности в сфере профилактики и охраны здоровья граждан, а также пропаганды здорового образа жизни и улучшения морально-психологического состояния граждан;</p>
+		<p>реализация общественно-значимых проектов социально-экономической направленности;</p>
+		<p>реализация, взаимодействие, сопровождение и участие в благотворительных проектах;</p>
+		<p>реализация благотворительных проектов в области социально-спортивного развития города.</p>
+	</section>
+	<section class="donate_sec" id="donate">
+		<p class="content_header donate_header">Жизнь дана на добрые дела</p>
+		<p class="narrow_text">Вы можете оставить добровольное пожертвование любым удобным для Вас способом:</p>
+		<div class="donate_button" onclick="window.location.replace('https://www.google.ru/');">
+			<span class="donate_button_icon">&#10084;</span>
+			<span>Отправить пожертвование</span>
+		</div>
+	</section>
+	<section class="text_sec">
+		<p class="content_header text_header">Текущие проекты</p>
+		<div class="tiles"></div>
+	</section>
+	<section class="footer_sec"></section>
+</body>
+</html>
