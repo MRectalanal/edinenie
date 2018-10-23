@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const server = require('https').Server(app);
+const server = require('http').Server(app);
 const url = require('url');
 const fs = require('fs');
 
