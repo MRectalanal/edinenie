@@ -1,4 +1,4 @@
-const socket = io.connect('185.20.227.161:8000');
+const socket = io.connect('185.20.227.161');
 socket.on('connect', function() {
 	socket.emit('getIndexData');
 	socket.on('setIndexData', (data)=> {
