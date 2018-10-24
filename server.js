@@ -8,7 +8,7 @@ const fs = require('fs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
-var port = 8000;
+var port = process.env.PORT || 80;
 server.listen( port, () => {
 	console.log('Server is running on port ' + port);
 });
