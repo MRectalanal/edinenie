@@ -223,7 +223,7 @@ section {
 }
 
 .footer_sec {
-	padding: 2em 9em 3em;
+	padding: 2em 2em 3em;
 	background-color: #8E8E8E;
 	display: inline-block;
 	width: -webkit-fill-available;
@@ -234,49 +234,24 @@ section {
 	cursor: pointer;
 }
 
-.footer_sec .logo_img > img {
-	width: 60%;
-	margin: auto;
+.footer_logo img {
+	width: 100px;
+	margin-right: 20px;
 }
 
-.footer_sec .logo_text_main {
-	font-family: RobotoLight;
-	font-size: 1em;
-}
-
-.footer_sec .logo_text_main > a {
-	font-family: RobotoLight;
-	font-size: 1em;
+.footer_contain {
+	width: 31.38%;
 	color: white;
-	text-decoration: none;
-}
-
-.footer_sec .logo_text {
-	width: 100%;
-	margin: auto;
-	text-align: center;
-}
-
-.footer_left {
-	color: white;
-	width: 55%;
-	margin-right: 5%;
 	display: block;
+	padding: 0 10px;
 	float: left;
+    word-break: break-word;
 }
 
-.footer_right {
-	color: white;
-	width: 35%;
-	margin-left: 5%;
-	display: block;
-	float: right;
-	text-align: center;
-}
-
-.footer_text_head {
-	font-size: 2em;
-	margin: 0;
+.footer_contain_mini {
+	margin-top:0.5em;
+	font-size:0.7em;
+	text-align:right
 }
 
 .img_in_text {
@@ -344,20 +319,16 @@ section {
 	}
 
 	.footer_sec {
-		padding: 2em 6em 3em;
+		padding: 2em 2em 3em;
 	}
 
-	.footer_sec .logo_img > img {
-		width: 70%;
+	.footer_contain {
+		width: 30.44%;
+		font-size: 0.7em;
 	}
 
-	.footer_left {
-		width: 65%;
-		margin-right: 0;
-	}
-
-	.footer_right {
-		margin-left: 0;
+	.footer_logo > p {
+		text-align: center;
 	}
 	
 	.half_tile {
@@ -386,8 +357,18 @@ section {
 		height: 12.9em;
 	}
 
-	.footer_sec {
-		padding: 2em 4em 3em;
+	.footer_contain {
+		width: 43%;
+		text-align: center;
+		font-size: 1em;
+	}
+
+	.footer_contain_mini {
+		width: 100%;
+	}
+
+	.footer_logo img {
+		display: none;
 	}
 
 	.project_title {
@@ -446,17 +427,14 @@ section {
 		text-align: center;
 	}
 
-	.footer_left, .footer_right {
+	.footer_contain {
 		width: 100%;
-		margin: 1em 0;
 	}
 
-	.footer_sec .logo_img {
-		float:none;
-	}
-
-	.footer_sec .logo_img > img {
-		width: 9em;
+	.footer_logo img {
+		display: block;
+		width: 76%;
+		margin: 0 12% 20px;
 	}
 
 	.project_title {

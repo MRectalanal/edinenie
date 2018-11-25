@@ -16,6 +16,6 @@ $(document).ready(() => {
 		$(document).keyup(function(e){if(e.keyCode==37){img_num=(img_num-1+all_imgs.length)%all_imgs.length;$('.popup_img').attr('src', all_imgs[img_num].attributes.src.nodeValue)}});
 	}
 	function remove_this(event){$(this).remove()}
-	$('.footer_sec').append('<div class="footer_left"><p class="footer_text_head">Контакты</p><p>г. Советская Гавань, ул. Совгаванская 0, оф. 420</p><p>+ 7 (000) 000-00-00</p></div><div class="footer_right"><div class="logo_img footer_logo"><img src="img/logo.png"/></div><div class="logo_text footer_logo"><div class="logo_text_main"><p>Фонд «Единение»</p></div></div></div>');
+	$('.footer_sec').append('<div class="footer_contain"><p>+7 (924) 225-38-88<br>toni.2drive1@mail.ru</p><p>ИНН: 2704025573</p></div><div class="footer_contain"><div class="footer_logo"><p><img src="img/logo__white.png" align="left" />Фонд социально-экономического<br>развития страны «Единение»</p></div></div><div class="footer_contain footer_contain_mini"><p>Юридичекий адрес:<br>ул. Партизанская, дом 15, кв. 1<br>Советская Гавань, 682800</p><p>Фактичекий адрес:<br>ул. Морская, дом 7, оф. 7<br>Советская Гавань, 682817</p></div>');
 	$('body').on('click','.footer_logo',()=>{window.location.href="/"});
 });
