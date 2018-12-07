@@ -26,6 +26,13 @@ app.get('/project', (req, res) => {
 	res.end(page);
 });
 
+app.get('/charity', (req, res) => {
+	var page = fs.readFileSync('public/kassa.html');
+	res.cookie("proj_name", req.url.substr(req.url.lastIndexOf('?')+1));
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.end(page);
+});
+
 app.get('/404', (req, res) => {
 	var page = fs.readFileSync('public/404.html');
 	res.writeHead(404, {'Content-Type': 'text/html'});
@@ -53,6 +60,18 @@ io.on('connection', socket => {
 			} else {
 				console.log(err);
 				socket.emit('setError404');
+			}
+		});
+	});
+
+	socket.on('getQuote', ()=>{
+		fs.readFile('data/quotes.json', (err, data) => {
+			if (data) {
+				data = JSON.parse(data);
+				var now = Math.floor(Date.now()/3600000)%data.items.length;
+				socket.emit('setQuote', data.items[now]);
+			} else {
+				console.log(err);
 			}
 		});
 	});

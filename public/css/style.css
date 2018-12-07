@@ -94,6 +94,10 @@ section {
 	text-align: center;
 }
 
+.first_sec__charity {
+	height: 10.95em;
+}
+
 .first_sec > #first_backgr {
 	position: fixed;
 	top: 0;
@@ -120,12 +124,16 @@ section {
 	max-width: 100%;
 	height: 100%;
 	background-color: white;
-	opacity: 0.44;
+	opacity: 0.54;
 	z-index: -1;
 }
 
 .second_sec {
 	margin-top: 21.9em;
+}
+
+.second_sec__charity {
+	margin-top: 10.95em;
 }
 
 .text_sec {
@@ -245,7 +253,7 @@ section {
 	display: block;
 	padding: 0 10px;
 	float: left;
-    word-break: break-word;
+	word-break: break-word;
 }
 
 .footer_contain_mini {
@@ -311,6 +319,79 @@ section {
 	border: 0.2em solid white;
 	border-radius: 0.3em;
 	vertical-align: middle;
+}
+
+/******************цитата*****************/
+
+.charity_quote {
+	margin: 0;
+	padding: 40px;
+	position: relative;
+	text-align: center;
+}
+
+.charity_quote:before, .charity_quote:after {
+	font-size: 3em;
+	color: #5190C4;
+	position: absolute;
+	height: 2px;
+	left: 40px;
+	right: 40px;
+	line-height: .5;
+	background: linear-gradient(to right, #3277B2 45%, transparent 45%, transparent), linear-gradient(to right, transparent, transparent 55%, #3277B2 55%);
+	font-family: serif;
+}
+
+.charity_quote:before {
+	content: "\201C";
+	top: 30px;
+}
+
+.charity_quote:after {
+	content: "\201D";
+	bottom: 30px;
+}
+
+.charity_quote_author {
+	margin-bottom: 1em;
+}
+
+.charity_quote_author cite {
+	font-size: 0.8em;
+}
+
+/****************оплата*************/
+
+section#pay>form {
+	padding: 0 5em;
+}
+
+section#pay>form>input, section#pay>form>textarea {
+	margin-bottom: 1.2em;
+	margin-top: 0.3em;
+	padding: .5rem .75rem;
+	width: 100%;
+	font-family: RobotoLight, sans-serif;
+	font-size: 0.9em;
+	line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+	background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: .25rem;
+}
+
+section#pay>form>input#submit {
+	width: 30%;
+	color: white;
+	background-color: #0275d8;
+	border-color: #0275d8;
+}
+
+section#pay>form>input#submit:hover {
+	background-color: #3277B2;
+	border-color: #3277B2;
 }
 
 @media (max-width: 1124px){

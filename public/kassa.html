@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Отправить пожертвование | Благотворительный фонд «Единение»</title>
+	<link rel='stylesheet' href='css/style.css'>
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/socket.io.js"></script>
+	<script src="js/logic.js"></script>
+	<script type="text/javascript" src="js/fill_charity.js"></script>
+</head>
+<body>
+	<section class="first_sec first_sec__charity">
+		<img id="first_backgr">
+		<div id="first_white"></div>
+		<div class="logo" onclick="location.href='#pay';">
+			<div class="project_title">Отправить пожертвование</div>
+		</div>
+	</section>
+	<section class="text_sec second_sec__charity">
+		<blockquote class="charity_quote">
+			<p class="charity_quote_text"></p>
+			<p class="charity_quote_author">— <cite></cite></p>
+		</blockquote>
+	</section>
+	<section class="text_sec" id="pay">
+<!-- Эти поля обязательные, их нельзя удалять из платежной формы =============================
+	в полях value="" в строках shopid и scid пропишите требуемые значения                 -->
+	<form action="https://money.yandex.ru/eshop.xml" method="post">
+		<input required name="shopId" value="543060" type="hidden"/>
+		<input required name="scid" value="843351" type="hidden"/>
+		<label>Сумма платежа (руб.): <font color="red">*</font></label><br>
+		<input required name="sum" value="100" type="number" min="1" placeholder="Укажите сумму платежа">
+		<!-- сумма name="sum" указана для примера (1 руб.); напишите свое значение             -->
+
+<!-- Поле name="customerNumber" обязательное, его удалить нельзя. ============================
+     Вы можете назвать его по своему, например вместо "Номер телефона" написать "Идентификатор
+     заказа", "Номер клиента", "Номер заказа" и т.д.;
+     т.е. поле может иметь ваше название, но name="customerNumber" переименовывать нельзя.
+     Внимание! Значение поля может быть только однострочным! Если вы сделаете его многострочным,
+     то платеж будет завершаться с ошибкой "Платеж не прошел из-за технической ошибки".    -->
+     <label>Номер телефона: <font color="red">*</font></label><br>
+     <input required name="customerNumber" value="" size="64"/><br>
+
+<!-- Любые из этих групп строк можно убрать (если они не нужны) или переименовать ============
+     например, вместо "Имя покупателя" написать "Цвет глаз" или "Номер автомобиля".
+     Важный момент: то, как вы назовёте поля, это будет видно только в вашей платежной форме,
+     названия полей не попадут в письмо об оплате (см. ниже информацию о письме), в письмо
+     попадут только значения полей.						           -->
+     <input name="custName" value="" type="hidden"/>
+     <label>Комментарий:</label><br>	
+     <textarea name="orderDetails" value="" rows="5" cols="64" wrap="soft"></textarea><br>	
+
+<!-- Кнопку "Оплатить", можно назвать по своему, например value="Оплатить за курсы вождения"
+	или value="Оплатить подписку на журнал" и т.д.                                        -->
+	<input id="submit" type="submit" value="Далее">	
+</form>
+</section>
+<section class="footer_sec"></section>
+</body>
+</html>
