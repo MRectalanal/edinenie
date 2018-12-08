@@ -370,20 +370,19 @@ section#pay>form>input, section#pay>form>textarea {
 	margin-bottom: 1.2em;
 	margin-top: 0.3em;
 	padding: .5rem .75rem;
-	width: 100%;
+	width: -webkit-fill-available;
 	font-family: RobotoLight, sans-serif;
 	font-size: 0.9em;
 	line-height: 1.25;
-    color: #464a4c;
-    background-color: #fff;
-    background-image: none;
+	background-color: #fff;
+	background-image: none;
 	background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.3);
-    border-radius: .25rem;
+	border: 1px solid rgba(0,0,0,.3);
+	border-radius: .25rem;
 }
 
 section#pay>form>input#submit {
-	width: 30%;
+	width: auto;
 	color: white;
 	background-color: #0275d8;
 	border-color: #0275d8;
@@ -472,6 +471,10 @@ section#pay>form>input#submit:hover {
 	.logo {
 		font-size: 18px;
 	}
+
+	section#pay>form {
+		padding: 0 3em;
+	}
 }
 
 @media (max-width: 460px){
@@ -513,8 +516,9 @@ section#pay>form>input#submit:hover {
 	}
 
 	.footer_logo img {
+		padding: 0 19%;
 		display: block;
-		width: 76%;
+		width: 36%;
 		margin: 0 12% 20px;
 	}
 
@@ -536,5 +540,10 @@ section#pay>form>input#submit:hover {
 
 	.first_sec > #first_backgr {
 		max-width: 135%;
+	}
+
+	section#pay>form {
+		padding: 0;
+		width: 100%;
 	}
 }
