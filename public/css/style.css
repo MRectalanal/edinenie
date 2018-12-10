@@ -491,11 +491,12 @@ section#pay>form>input#submit:hover {
 	}
 
 	.donate_header {
-		font-size: 2.4em;
+		font-size: 1.8em;
 	}
 
 	.narrow_text {
 		padding: 0 1.5em;
+		font-size: 1em;
 	}
 
 	.first_sec {
