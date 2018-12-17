@@ -548,8 +548,9 @@ section#pay>form>input#submit:hover {
 	}
 
 	.footer_sec {
-		padding: 0.8em;
+		padding: 1.5em;
 		text-align: center;
+		font-size: 17px;
 	}
 
 	.footer_contain {
