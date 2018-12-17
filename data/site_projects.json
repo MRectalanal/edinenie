@@ -1,8 +1,16 @@
 [
 	{
 		"name": "spartak",
+		"realized": false,
 		"title": "Сбор средств на реконструкцию стадиона «Спартак»",
 		"main_color": "#3277b2",
 		"main_pic": "img/spartak.jpg"
+	},
+	{
+		"name": "football2018",
+		"realized": true,
+		"title": "Рождественский турнир по мини-футболу",
+		"main_color": "#32b23a",
+		"main_pic": "img/football2018/cover.jpg"
 	}
 ]

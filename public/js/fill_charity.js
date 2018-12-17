@@ -1,5 +1,6 @@
 $(document).ready(() => {
 	const socket = io.connect('185.20.227.161');
+	// const socket = io.connect('localhost:8080');
 	function get_cookie(c){
 		var results=document.cookie.match('(^|;) ?'+c+'=([^;]*)(;|$)');
 		if(results)return(unescape(results[2]));

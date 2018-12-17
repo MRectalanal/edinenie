@@ -1,5 +1,6 @@
 $(document).ready(() => {
 	const socket = io.connect('185.20.227.161');
+	// const socket = io.connect('localhost:8080');
 	function get_cookie(c){
 		var results=document.cookie.match('(^|;) ?'+c+'=([^;]*)(;|$)');
 		if(results)return(unescape(results[2]));
@@ -29,10 +30,13 @@ $(document).ready(() => {
 							$('section#sec'+i).append('<p>'+item.txt+'</p>');
 							break;
 						case 'txt&img':
-							$('section#sec'+i).append('<p><img src="'+item.img+'" class="img_in_text img_expand" align="'+item.img_align+'">'+item.txt+'</p>');
+							$('section#sec'+i).append('<div><p><img src="'+item.img+'" class="img_in_text img_expand" align="'+item.img_align+'">'+item.txt+'</p></div>');
 							break;
 						case 'images_block_3':
 							$('section#sec'+i).append('<div class="images_block images_block_3"><img src="'+item.img1+'" class="img_expand"><img src="'+item.img2+'" class="img_expand"><img src="'+item.img3+'" class="img_expand"></div>');
+							break;
+						case 'images_block_1':
+							$('section#sec'+i).append('<div class="images_block images_block_1"><img src="'+item.img+'" class="img_expand"></div>');
 							break;
 					}
 				}

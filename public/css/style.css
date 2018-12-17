@@ -30,6 +30,20 @@ section {
 	padding: 1em 8em 2em;
 }
 
+a {
+	text-decoration-line: none;
+	color: #1e488f;
+    border-bottom: 1.1px solid #1e488f;
+}
+
+a:hover {
+	border-bottom-color:transparent;
+}
+
+ul {
+	list-style-type: circle;
+}
+
 .logo {
 	display: inline-block;
 	vertical-align: middle;
@@ -140,6 +154,12 @@ section {
 	background-color: white;
 }
 
+.text_sec>* {
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .donate_sec {
 	background-color: #3277B2;
 	color: white;
@@ -147,7 +167,7 @@ section {
 
 .content_header {
 	text-align: center;
-	margin: 0.5em 0;
+	margin: 0.5em auto;
 }
 
 .text_header {
@@ -221,6 +241,7 @@ section {
 }
 
 .tile_text > a {
+	border: none;
 	text-decoration-line: none;
 	color: white;
 	height: -webkit-fill-available;
@@ -275,13 +296,18 @@ section {
 	margin-left: 0.6em;
 }
 
-.images_block_3 {
+/*.images_block_3 {
 	display: inline-block;
-}
+}*/
 
 .images_block_3 > img {
 	width: 31%;
 	margin: 0 0.5%;
+}
+
+.images_block_1 > img {
+	width: 100%;
+	margin: 0;
 }
 
 .program_sec {
@@ -383,6 +409,7 @@ section#pay>form>input, section#pay>form>textarea {
 	background-clip: padding-box;
 	border: 1px solid rgba(0,0,0,.3);
 	border-radius: .25rem;
+	resize: vertical;
 }
 
 section#pay>form>input#submit {
@@ -421,6 +448,10 @@ section#pay>form>input#submit:hover {
 }
 
 @media (max-width: 991px){
+	.donate_header {
+    	font-size: 2.3em;
+	}
+
 	body {
 		font-size: 23px;
 	}
@@ -478,6 +509,11 @@ section#pay>form>input#submit:hover {
 
 	section#pay>form {
 		padding: 0 3em;
+	}
+
+	.first_sec > #first_backgr {
+		max-width: 120%;
+		left: -10%;
 	}
 }
 
@@ -544,11 +580,18 @@ section#pay>form>input#submit:hover {
 	}
 
 	.first_sec > #first_backgr {
-		max-width: 135%;
+		max-width: 136%;
+		left: -18%;
 	}
 
 	section#pay>form {
 		padding: 0;
 		width: 100%;
+	}
+}
+
+@media (max-width: 360px){
+	.tile_text {
+		font-size: 1.5em;
 	}
 }
